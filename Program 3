@@ -1,0 +1,20 @@
+# Dictionary for the States and their cities
+states_and_cities = {
+    'Tamil Nadu': ['Chennai', 'Madurai', 'Trichy'],
+    'Kerala': ['Kochi', 'Thiruvananthapuram', 'Erankulam'],
+    'Karnataka': ['Bangaluru', 'Shivamogga', 'Mysore']
+}
+# Options Available
+print("Available States:")
+for state in states_and_cities:
+    print(state)
+user_input = input("Enter the name of a state from the above list to see its cities: ")
+# According to user_input retrieving and sorting the cities in ascending order
+if user_input in states_and_cities:
+    cities = sorted(states_and_cities[user_input])
+    print(f"Cities in {user_input} (in ascending order):")
+    for city in cities:
+        print(city)
+else:
+    #invalid state input
+    print(f"Sorry, {user_input} is not in the list of available states.")
